@@ -1,0 +1,4 @@
+export const constants = {
+    SET_USER_DETAILS: 'SET_USER_DETAILS',
+    GET_USER_DETAILS: 'GET_USER_DETAILS'
+}

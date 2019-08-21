@@ -1,0 +1,9 @@
+.option {
+    height: 100%;
+    width: 50%; 
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

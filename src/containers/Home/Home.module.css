@@ -1,0 +1,10 @@
+.layout {
+    background-color: '#F0F2F5';
+    width: 100vw;
+    height: 100vh;
+};
+.apply {
+    width: 100%;
+    background-color: black;
+}
+
