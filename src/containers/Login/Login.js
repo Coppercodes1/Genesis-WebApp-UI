@@ -39,7 +39,9 @@ export default class Login extends Component {
                 if (response.UserRef != null) {
                     const userDetails = {
                         UserRef: response.UserRef,
-                        AuthToken: response.AuthToken
+                        AuthToken: response.AuthToken,
+                        Username: response.Username,
+                        UserRole: response.UserRole
                     }
                     message.success('Login successful', 2.5, () => this.navigate(userDetails))
                 } else {
@@ -51,7 +53,6 @@ export default class Login extends Component {
             })
     };
     navigate = (userDetails) => {
-        console.log('before ', userDetails)
         this.props.history.replace({
             pathname: '/Home',
             state: { detail: userDetails }

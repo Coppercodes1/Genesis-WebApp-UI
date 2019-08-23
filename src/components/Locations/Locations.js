@@ -17,7 +17,6 @@ export default class Locations extends Component {
     };
 
     onChange = event => {
-        console.log('radio checked', event.target.value);
         this.setState({
             value: event.target.value,
         });

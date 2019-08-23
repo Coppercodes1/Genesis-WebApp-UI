@@ -8,8 +8,8 @@ import Options from '../../components/Options/Options';
 import HeaderComponent from '../../components/Header/Header';
 import Map from '../../components/Map/Map';
 import Locations from '../../components/Locations/Locations';
-import Matrices from '../../components/Matrices/Matrices';
-
+import Metrics from '../../components/Metrics/Metrics';
+import Filters from '../../components/Filters/Filters';
 const { Sider, Content, Header } = Layout;
 const { Text } = Typography;
 
@@ -25,23 +25,25 @@ export default class Home extends Component {
         this.setState({ currentOption: optionId })
     };
     render() {
+        let { UserRef } = this.state.userDetails;
         return (
             <Layout className={styles.layout} >
-                <HeaderComponent />
+                <HeaderComponent userDetails={this.state.userDetails} />
                 <Layout>
                     <Sider width={250} style={inStyles.sider}>
                         <div style={inStyles.filters}>
                             <Text strong>Filters</Text>
                             <Icon type="filter" theme="filled" />
                         </div>
-                        <div style={{ marginTop: '10px' }}>
+                        <Filters UserRef={UserRef} />
+                        {/* <div style={{ marginTop: '10px' }}>
                             <div >
                                 <Text strong>Locations</Text>
                             </div>
                             <div style={{ marginTop: '10px' }}>
                                 <Locations />
                             </div>
-                        </div>
+                        </div>*/}
                         <div style={inStyles.apply} >
                             <Button type="primary" block>Apply</Button>
                         </div>
@@ -66,8 +68,8 @@ export default class Home extends Component {
                             </div>
                         </Layout>
                     </Content>
-                    <Sider width={250} style={inStyles.sider}>
-                        <Matrices />
+                    <Sider width={350} style={inStyles.sider}>
+                        <Metrics />
                     </Sider>
                 </Layout>
             </Layout>
@@ -89,7 +91,8 @@ const inStyles = {
         padding: 20,
         margin: 20,
         backgroundColor: '#fff',
-        boxShadow: '0px 0px 15px 5px rgba(0,0,0,0.1)'
+        boxShadow: '0px 0px 15px 5px rgba(0,0,0,0.1)',
+        overflowY: 'scroll'
     },
     selectOptions: {
         height: 50,

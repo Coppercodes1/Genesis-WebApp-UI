@@ -22,7 +22,6 @@ class Map extends Component {
 
     componentDidMount = () => {
         let { userDetails } = this.state;
-        console.log('user details', this.state.userDetails)
         return fetch(Url.baseUrl + 'getLocationView', {
             method: 'POST',
             headers: {
@@ -73,6 +72,12 @@ class Map extends Component {
                 >
                     {
                         data.map((location, index) => {
+                            let icon = '';
+                            if (location.no_of_sensor_failures == 0) {
+                                icon = 'http://www.coppercodes.com/Genesis/Images/MapMarkIcons/MapMarkGreen-50.png';
+                            } else {
+                                icon = 'http://www.coppercodes.com/Genesis/Images/MapMarkIcons/MapMarkRed-50.png';
+                            }
                             return (
                                 <Marker
                                     key={index}
@@ -81,7 +86,7 @@ class Map extends Component {
                                         lng: Number(location.coordinates.longitude)
                                     }}
                                     icon={{
-                                        url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+                                        url: icon
                                     }}
                                     onClick={() => {
                                         this.setState({
