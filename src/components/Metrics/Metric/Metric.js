@@ -33,15 +33,15 @@ const Metric = (props) => {
             <div style={{ height: '100%', width: '60%' }}>
                 <div style={{
                     width: '100%',
-                    height: '70%',
+                    height: '73%',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center'
                 }}>
-                    <Title level={3} style={{ padding: 0, margin: 0, color: '#fff' }}>{props.number}</Title>
+                    <Title level={2} style={{ padding: 0, margin: 0, color: '#fff' }}>{props.number}</Title>
                 </div>
                 <Divider style={{ color: '#fff', margin: 0 }} />
-                <div style={{ textAlign: 'center' }}>
+                <div style={{ height: '24%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ color: '#fff' }} strong>{props.type}</Text>
                 </div>
             </div>

@@ -35,15 +35,15 @@ export default class Home extends Component {
                             <Text strong>Filters</Text>
                             <Icon type="filter" theme="filled" />
                         </div>
-                        <Filters UserRef={UserRef} />
-                        {/* <div style={{ marginTop: '10px' }}>
+                        {/* <Filters UserRef={UserRef} /> */}
+                        <div style={{ marginTop: '10px' }}>
                             <div >
                                 <Text strong>Locations</Text>
                             </div>
                             <div style={{ marginTop: '10px' }}>
                                 <Locations />
                             </div>
-                        </div>*/}
+                        </div>
                         <div style={inStyles.apply} >
                             <Button type="primary" block>Apply</Button>
                         </div>
@@ -57,7 +57,12 @@ export default class Home extends Component {
                                     selectOption={(optionId) => this.selectOption(optionId)}
                                 />
                             </Header>
-                            <div style={{ height: '75vh', width: '60vw', alignSelf: 'center', textAlign: 'center' }}>
+                            {/* <Content style={{ display: 'flex', justifyCont: 'center', alignItems: 'center' }}>
+                                <div>
+                                    ahad
+                                </div>
+                            </Content> */}
+                            <div style={{ height: '75vh', width: '50vw', alignSelf: 'center', textAlign: 'center' }}>
                                 <Map
                                     googleMapURL={`https://maps.googleapis.com/maps/api/js?&v=3.exp&libraries=geometry,drawing,places&key=${GoogleApiKey.key}`}
                                     loadingElement={<div style={{ height: `100%` }} />}

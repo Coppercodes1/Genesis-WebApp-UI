@@ -50,7 +50,17 @@ export default class Filters extends Component {
         } else {
             let { filters } = this.state;
             for (let filter in filters) {
-                console.log(filters[filter].filterName)
+                //console.log(filters[filter].filterName)
+                let filter = (
+                    <div style={{ marginTop: '10px' }}>
+                        <div >
+                            <Text strong>Locations</Text>
+                        </div>
+                        <div style={{ marginTop: '10px' }}>
+
+                        </div>
+                    </div>
+                );
             }
             return (
                 <div>
