@@ -3,6 +3,7 @@ import Location from './Location/Location';
 
 
 const locations = [
+    { name: 'All' },
     { name: 'Verna' },
     { name: 'Kudal' },
     { name: 'Kundaim' },
