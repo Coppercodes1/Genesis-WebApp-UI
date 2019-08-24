@@ -28,7 +28,10 @@ export default class Home extends Component {
         let { UserRef } = this.state.userDetails;
         return (
             <Layout className={styles.layout} >
-                <HeaderComponent userDetails={this.state.userDetails} />
+                <HeaderComponent 
+                    userDetails={this.state.userDetails}
+                    logout={() => this.props.history.push('Login')} 
+                />
                 <Layout>
                     <Sider width={250} style={inStyles.sider}>
                         <div style={inStyles.filters}>

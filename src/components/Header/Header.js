@@ -33,7 +33,11 @@ const HeaderComponent = (props) => (
                 color='#fff'
                 style={{ marginLeft: 15 }}
             />
-            <Icon type="poweroff" className={styles.icon} style={{ color: '#fff', marginLeft: 15 }} />
+            <Icon
+                onClick={props.logout}
+                type="poweroff"
+                className={styles.icon}
+                style={{ color: '#fff', marginLeft: 15 }} />
             {/* <FiLogOut
                 size={30}
                 color='#fff'
